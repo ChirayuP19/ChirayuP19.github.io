@@ -43,10 +43,10 @@ public class BowlingGame {
             System.out.print(playerName + ", Enter score for " + rollDescription + " : ");
             while (!scanner.hasNextInt()) {
                 System.out.println("Invalid score. Please enter a score between 0 to 10.");
-                scanner.next(); // consume the invalid input
+                scanner.next();
             }
             score = scanner.nextInt();
-            scanner.nextLine(); // consume newline left-over
+            scanner.nextLine();
             if (score < 0 || score > 10) {
                 System.out.println("Invalid score. Please enter a score between 0 to 10.");
             }
@@ -54,7 +54,7 @@ public class BowlingGame {
         return score;
     }
 
-    // Method to get the scores for a frame
+    // Take a score from rounds.
     private static int[] getFrameScores(String playerName, int Round) {
         int[] rolls = new int[2];
         rolls[0] = getRollScore(playerName, "first");
@@ -81,7 +81,7 @@ public class BowlingGame {
         return rolls;
     }
 
-    // Method to display game results
+    // display the game result.
     private static void displayGameResults(String player1Name, String player2Name, int[][] player1Scores, int[][] player2Scores) {
         int player1Total = 0;
         int player2Total = 0;
@@ -104,7 +104,7 @@ public class BowlingGame {
         }
     }
 
-    // Method to calculate the score for a frame
+    // calculate game score
     private static int calculateFrameScore(int[][] playerScores, int Round) {
         int frameScore = playerScores[Round][0] + playerScores[Round][1];
 
@@ -116,7 +116,7 @@ public class BowlingGame {
         return frameScore;
     }
 
-    // Method to get the score of the next two rolls after a strike
+
     private static int getNextTwoRollsScore(int[][] playerScores, int frame) {
         if (frame < Max_Frames - 1) {
             if (playerScores[frame + 1][0] == 10 && frame < Max_Frames - 2) {
@@ -128,7 +128,7 @@ public class BowlingGame {
         return 0;
     }
 
-    // Method to get the score of the next roll after a spare
+
     private static int getNextRollScore(int[][] playerScores, int frame) {
         if (frame < Max_Frames - 1) {
             return playerScores[frame + 1][0];
@@ -136,7 +136,7 @@ public class BowlingGame {
         return 0;
     }
 
-    // Method to ask if the players want to play another game
+
     private static boolean playAnotherGame() {
         System.out.print("Do you want to play another game!? (yes/no): ");
         String response = scanner.nextLine();
