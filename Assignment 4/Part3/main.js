@@ -1,3 +1,8 @@
+// Name : Chirayu Patel
+// File : main.js
+// Date: 31 July 2024
+// Description: Bouncing Ball  (Assignment 4 part 3) 
+
 // setup canvas
 
 const canvas = document.querySelector("canvas");
