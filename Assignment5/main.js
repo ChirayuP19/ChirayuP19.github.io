@@ -1,3 +1,8 @@
+// Name : Chirayu Patel
+// File : main.js
+// Date: 07 Auguest 2024
+// Description: Acessbility Troubleshooting  (Assignment 5 part 1)
+
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
